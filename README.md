@@ -73,6 +73,7 @@ Please note the ACCESS KEY for **minio** is minio and SECREY KEY is **minio123**
 *Setup*
 
 ```markdown
+$ kubectl apply -f https://raw.githubusercontent.com/mboumsahi/velero/master/00-prereqs.yaml
 $ kubectl apply -f https://raw.githubusercontent.com/mboumsahi/velero/master/minio-deployment.yaml
 $ kubectl apply -f https://raw.githubusercontent.com/mboumsahi/velero/master/minio-storage-location.yaml
 $ kubectl apply -f https://raw.githubusercontent.com/mboumsahi/velero/master/minio-pvc.yaml
