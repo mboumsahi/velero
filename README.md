@@ -71,6 +71,34 @@ $ kubectl apply -f https://raw.githubusercontent.com/mboumsahi/velero/master/min
 $ kubectl apply -f https://raw.githubusercontent.com/mboumsahi/velero/master/minio-service.yaml
 
 ```
+
+*Install Restic*
+
+```markdown
+
+apt-get install restic
+
+```
+
+*Configure Restic*
+
+```markdown
+
+velero install --provider minio-service --bucket resticbucket  --secret-file=./credentials-velero --use-restic
+
+```
+
+*Expose minio*
+
+```markdown
+
+minikube service minio-service
+
+```
+
+
+
+
 **How Does Velero Work ?**
 
 When you run velero backup create test-backup:
@@ -81,7 +109,7 @@ When you run velero backup create test-backup:
 * The BackupController makes a call to the object storage service – for example, AWS S3 – to upload the backup file.
 
 
-![velero_how_it_work](uploads/b8e400a64cafd62f830eebee768aa148/velero_how_it_work.jpeg)
+![velero_how_it_work](images/velero_how_it_work.jpeg)
 
 **Backup**
 
