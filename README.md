@@ -45,6 +45,14 @@ What does the pre-requisites install on our cluster ?
 
 *Velero needs a S3 compatible object storage to store the backups.*
 
+We Are using minio as Example.
+
+**Whats is minio**
+
+A high performance, distributed object storage server, designed for large-scale data infrastructure. It is an ideal S3-compatible replacement for Hadoop HDFS and scale out NAS for machine learning and other big data workloads
+
+
+
 **Support Matrix**
 
 * IBM Cloud
